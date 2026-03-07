@@ -984,7 +984,116 @@
         </div>
         
         <audio id="main-audio"></audio>
+
+         <div id="namaz-view" class="page" style="display:none; padding-bottom: 100px;">
+    
+    <header style="background:var(--box-bg); padding:15px; display:flex; align-items:center; position:sticky; top:0; z-index:1001;">
+        <div onclick="showPage('home-view')" style="cursor:pointer; width:40px; height:40px; display:flex; align-items:center; justify-content:center; margin-right:15px; background:rgba(15,118,110,0.1); border-radius:50%;">
+            <i class="fas fa-arrow-left" style="color:var(--primary); font-size:1.2rem;"></i>
+        </div>
+        <div style="font-weight:700; font-size: 1.1rem;">Namaz Ka Tarika</div>
+    </header>
+
+    <div class="detail-card-hero">
+        <h1 style="font-family:'Amiri'; font-size:2.8rem;">الصلاة</h1>
+        <p>Step-by-Step Complete Guide</p>
+    </div>
+
+    <div class="guide-card" style="margin: 20px;">
+        <h3 style="color: var(--primary); margin-bottom: 15px; text-align: center;"><i class="fas fa-table"></i> नमाज़ रकात टेबल</h3>
+        <div style="overflow-x:auto;">
+            <table class="namaz-table">
+                <thead>
+                    <tr>
+                        <th>Namaz</th>
+                        <th>Sunnat (Pehle)</th>
+                        <th>Farz</th>
+                        <th>Sunnat (Baad)</th>
+                        <th>Nafil</th>
+                        <th>Witr</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Fajr (फ़ज्र)</td><td>2</td><td>2</td><td>-</td><td>-</td><td>-</td><td>4</td></tr>
+                    <tr><td>Zuhr (ज़ुहर)</td><td>4</td><td>4</td><td>2</td><td>2</td><td>-</td><td>12</td></tr>
+                    <tr><td>Asr (अस्र)</td><td>4</td><td>4</td><td>-</td><td>-</td><td>-</td><td>8</td></tr>
+                    <tr><td>Maghrib (मग़रिब)</td><td>-</td><td>3</td><td>2</td><td>2</td><td>-</td><td>7</td></tr>
+                    <tr><td>Isha (इशा)</td><td>4</td><td>4</td><td>2</td><td>2</td><td>3</td><td>17</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="guide-card" style="margin: 20px;">
+        <h3 style="color: var(--primary); margin-bottom: 15px; text-align: center;"><i class="fas fa-hands-praying"></i> नमाज़ की नीयत</h3>
         
+        <div class="namaz-tabs" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 15px;">
+            <button class="n-btn active" onclick="changeNiyat('fajr', this)">Fajr</button>
+            <button class="n-btn" onclick="changeNiyat('zuhr', this)">Zuhr</button>
+            <button class="n-btn" onclick="changeNiyat('asr', this)">Asr</button>
+            <button class="n-btn" onclick="changeNiyat('maghrib', this)">Maghrib</button>
+            <button class="n-btn" onclick="changeNiyat('isha', this)">Isha</button>
+        </div>
+
+        <div id="niyat-box" style="background: rgba(15,118,110,0.05); padding: 20px; border-radius: 15px; border: 1px solid rgba(15,118,110,0.2);">
+            <h4 id="niyat-title" style="color: var(--accent); margin-bottom: 10px;">फ़ज्र (Fajr) की नीयत</h4>
+            <p id="niyat-urdu" class="arabic-text" style="font-size: 1.5rem; text-align: right; color: var(--text);">نیت کرتا ہوں میں 2 رکعت نماز سنت/فرض فجر کی، واسطے اللہ تعالیٰ کے، منہ میرا کعبہ شریف کی طرف، اللہ اکبر۔</p>
+            <p id="niyat-hindi" style="color: #b0b8c4; margin-top: 10px; line-height: 1.6;">मैं नियत करता हूँ 2 रकात नमाज़ सुन्नत/फ़र्ज़ फ़ज्र की, वास्ते अल्लाह ताला के, मुँह मेरा काबा शरीफ़ की तरफ, अल्लाहु अकबर।</p>
+        </div>
+    </div>
+
+    <div style="margin: 20px;">
+        <h3 style="color: var(--primary); margin-bottom: 15px; text-align: center;"><i class="fas fa-shoe-prints"></i> नमाज़ पढ़ने का तरीका</h3>
+
+        <div class="step-card">
+            <h4 style="color: var(--accent);"><span style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 5px; margin-right: 8px;">1</span>सना (Sana) - तकबीर के बाद</h4>
+            <p class="arabic-text" style="font-size: 1.8rem; margin: 10px 0; color: var(--text);">سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ وَلَا إِلَهَ غَيْرُكَ</p>
+            <p style="color: #b0b8c4;">सुब्हान-कल्लाहुम-म व बिहम्दि-क व तबार-कस्मु-क व तआला जद्दु-क व ला इला-ह ग़ैरु-क</p>
+        </div>
+
+        <div class="step-card">
+            <h4 style="color: var(--accent);"><span style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 5px; margin-right: 8px;">2</span>रुकू (Ruku)</h4>
+            <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 5px;">रुकू में जाते हुए 'अल्लाहु अकबर' कहें और 3, 5 या 7 बार पढ़ें:</p>
+            <p class="arabic-text" style="font-size: 1.8rem; margin: 10px 0; color: var(--text);">سُبْحَانَ رَبِّيَ الْعَظِيمِ</p>
+            <p style="color: #b0b8c4;">सुब्हान रब्बि-यल अज़ीम</p>
+        </div>
+        
+        <div class="step-card">
+            <h4 style="color: var(--accent);"><span style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 5px; margin-right: 8px;">3</span>रुकू से उठते हुए (Qiyam)</h4>
+            <p class="arabic-text" style="font-size: 1.8rem; margin: 10px 0; color: var(--text);">سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ<br><span style="font-size: 1.5rem;">رَبَّنَا لَكَ الْحَمْدُ</span></p>
+            <p style="color: #b0b8c4;">समिअल्लाहु लिमन हमिदह <br> रब्बना ल-कल हम्द</p>
+        </div>
+
+        <div class="step-card">
+            <h4 style="color: var(--accent);"><span style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 5px; margin-right: 8px;">4</span>सजदा (Sajdah)</h4>
+            <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 5px;">सजदे में 'अल्लाहु अकबर' कहते हुए जाएँ और 3 बार पढ़ें:</p>
+            <p class="arabic-text" style="font-size: 1.8rem; margin: 10px 0; color: var(--text);">سُبْحَانَ رَبِّيَ الْأَعْلَى</p>
+            <p style="color: #b0b8c4;">सुब्हान रब्बि-यल आ'ला</p>
+        </div>
+
+        <div class="step-card">
+            <h4 style="color: var(--accent);"><span style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 5px; margin-right: 8px;">5</span>अत्तहिय्यात (Tashahhud)</h4>
+            <p class="arabic-text" style="font-size: 1.5rem; line-height: 2; margin: 10px 0; color: var(--text);">التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ</p>
+            <p style="color: #b0b8c4; font-size: 0.95rem;">अत्तहिय्यातु लिल्लाहि वस्सलवातु वत्तय्यिबातु, अस्सलामु अलै-क अय्युहन-नबिय्यु व रहमतुल्लाहि व बरकातुहू, अस्सलामु अलैना व अला इबादिल्लाहिस्-सालिहीन, अश्हदु अल्ला इला-ह इल्लल्लाहु, व अश्हदु अन्न मुहम्मदन् अब्दुहू व रसूलुह।</p>
+        </div>
+
+        <div class="step-card">
+            <h4 style="color: var(--accent);"><span style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 5px; margin-right: 8px;">6</span>दरूद शरीफ (Darood Ibrahim)</h4>
+            <p class="arabic-text" style="font-size: 1.5rem; line-height: 2; margin: 10px 0; color: var(--text);">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</p>
+            <p style="color: #b0b8c4; font-size: 0.95rem;">अल्लाहुम-म स़ल्लि अला मुहम-मदिव् व अला आलि मुहम-मदिन् कमा स़ल्लै-त अला इब्राही-म व अला आलि इब्राही-म इन्न-क हमीदुम-मजीद।</p>
+        </div>
+        
+        <div class="step-card">
+            <h4 style="color: var(--accent);"><span style="background: var(--primary); color: white; padding: 2px 8px; border-radius: 5px; margin-right: 8px;">7</span>दुआ-ए-मासूरा (Dua Masura)</h4>
+            <p class="arabic-text" style="font-size: 1.5rem; line-height: 2; margin: 10px 0; color: var(--text);">اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ</p>
+            <p style="color: #b0b8c4; font-size: 0.95rem;">अल्लाहुम-म इन्नी ज़लमतु नफ्सी ज़ुल्मन् कसीरंव-व ला यग़्फ़िरुज़-जुनू-ब इल्ला अन्-त फ़ग़्फ़िर्ली मग़्फ़िर-तम् मिन् इन्दि-क वर्हम्नी इन्न-क अन्तल्-ग़फ़ूरुर-रहीम।</p>
+        </div>
+    </div>
+</div>
+
+        
+    </div>
    
 
     <script>
